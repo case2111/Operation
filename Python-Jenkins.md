@@ -204,9 +204,9 @@
 >  - 描述：通过目录级数获取所有的工程列表。
 >    每个工程都是一个带有名称、url、颜色和全名的字典。
 >  - 参数：
->     - 	folder_depth：查找的级数，`int`。默认值为None，没有限制，0表示只查找顶级目录。
+>    - 	folder_depth：查找的级数，`int`。默认值为None，没有限制，0表示只查找顶级目录。
 >  - 返回
->     - 	工程列表，`[ { str: str} ]`
+>    - 	工程列表，`[ { str: str} ]`
 >  - 注意：
 >    在多个文件夹的实例中，使用run脚本方法来检索所有作业可能更有效。
 >     - 举例：
@@ -266,7 +266,7 @@
 >  - 描述：关闭Jenkins工程。
 >    若要重新打开，调用`Jenkins.enable_job()`.
 >  - 参数：
->     - name：工程名，`str`
+>    - name：工程名，`str`
 22. **set_next_build_number**(name, number)
 >  - 描述：设置某个工程的下一个构建编号。
 >    下一个构建编号包含在工程信息中，调用`Jenkins.get_job_info()`可获得。如果指定的下一个构建号小于最后一个构建号，那么Jenkins将忽略该请求。
@@ -315,7 +315,7 @@
 27. **get_job_config**(name)
 >  - 描述：获取一个已存在的工程的配置文件。
 >  - 参数：
->     - 	name：工程名，`str`
+>    - name：工程名，`str`
 >  - 返回：工程配置(XML 格式)
 28. **reconfig_job**(name, config_xml)
 >  - 描述：改变已存在的工程的配置。
@@ -384,7 +384,7 @@
 >  - 描述：获取构建节点列表
 >    每个节点都是一个包含‘name’和‘offline’键的字典。
 >  - 返回：
->     - 	节点列表，`[ { str: str, str: bool} ]`
+>     - 节点列表，`[ { str: str, str: bool} ]`
 36. **get_node_info**(name, depth=0)
 >  - 描述：获取节点信息字典。
 >  - 参数：	
@@ -395,7 +395,7 @@
 37. **node_exists**(name)
 >  - 描述：检查某节点是否存在
 >  - 参数：
->     - 	name：节点名称，`str`
+>     - name：节点名称，`str`
 >  - 返回：
 >     - 若节点存在则返回`True`。
 38. **assert_node_exists**(name, exception_message='node[%s] does not exist')
@@ -462,7 +462,7 @@
 48. **view_exists**(name)
 >  - 描述：检查一个视图是否存在。
 >  - 参数：
->     - 	name：视图名，`str`
+>     - name：视图名，`str`
 >  - 返回：
 >     - 若视图存在则返回`True`。
 49. **get_views**()
@@ -473,7 +473,7 @@
 50. **delete_view**(name)
 >  - 描述：永久删除某视图。
 >  - 参数：
->     - 	name：视图名，`str`
+>    - name：视图名，`str`
 51. **create_view**(name, config_xml)
 >  - 描述：创建一个新视图。
 >  - 参数：
