@@ -92,7 +92,7 @@
 >        >>> queue_info = server.get_queue_info()
 >        >>> print(queue_info[0])
 >        {u'task': {u'url': u'http://your_url/job/my_job/', u'color': u'aborted_anime', u'name': u'my_job'}, u'stuck': False, u'actions': [{u'causes': [{u'shortDescription': u'Started by timer'}]}], u'buildable': False, u'params': u'', u'buildableStartMilliseconds': 1315087293316, u'why': u'Build #2,532 is already in progress (ETA:10 min)', u'blocked': True}
->        ```
+>  ```
 8. **cancel_queue**(id)
 >  - 描述：取消一个排队的构建。
 >  - 参数：	
@@ -111,7 +111,7 @@
 >        >>> jobs = info['jobs']
 >        >>> print(jobs[0])
 >        {u'url': u'http://your_url_here/job/my_job/', u'color': u'blue',u'name': u'my_job'}
->        ```
+>  ```
 10. **get_whoami**()
 >  - 描述：获取Jenkins中账户的信息，这是验证用户的一种简单方法。
 >  - 返回：当前用户的信息，`dict`
@@ -120,7 +120,7 @@
 >        >>> me = server.get_whoami()
 >        >>> print me['fullName']
 >        'John'
->        ```
+>  ```
 11. **get_version**()
 >  - 描述：获取Jenkins的版本号。
 >  - 返回：Jenkins版本号编码，`str`
@@ -129,7 +129,7 @@
 >        >>> info = server.get_version()
 >        >>> print info
 >        1.541'
->        ```
+>  ```
 12. **get_plugins_info**(depth=2)
 >  - 描述：获取Jenkins所有已安装的插件信息。
 >    以JSON格式返回每个已安装的插件数据。
@@ -142,7 +142,7 @@
 >        >>> info = server.get_plugins_info()
 >        >>> print(info)
 >        [{u'backupVersion': None, u'version': u'0.0.4', u'deleted': False,u'supportsDynamicLoad': u'MAYBE', u'hasUpdate': True,u'enabled': True, u'pinned': False, u'downgradable': False,u'dependencies': [], u'url':u'http://wiki.jenkins-ci.org/display/JENKINS/Gearman+Plugin',u'longName': u'Gearman Plugin', u'active': True, u'shortName':u'gearman-plugin', u'bundled': False}, ..]
->        ```
+>  ```
 13. **get_plugin_info**(name, depth=2)
 >  - 描述：获取某个已安装的插件信息。
 >    以JSON格式返回某个插件的信息，插件名称必须严格匹配。
@@ -158,7 +158,7 @@
 >        >>> info = server.get_plugin_info("Gearman Plugin")
 >        >>> print(info)
 >         {u'backupVersion': None, u'version': u'0.0.4', u'deleted': False,u'supportsDynamicLoad': u'MAYBE', u'hasUpdate': True,u'enabled': True, u'pinned': False, u'downgradable': False,u'dependencies': [], u'url':u'http://wiki.jenkins-ci.org/display/JENKINS/Gearman+Plugin',u'longName': u'Gearman Plugin', u'active': True, u'shortName':u'gearman-plugin', u'bundled': False}
->         ```
+>  ```
 14. **get_plugins**(depth=2)
 >  - 描述：返回插件信息，使用帮助类进行版本比较。
 >    该方法检索所有已安装的插件的信息，并使用一个插件助手类来简化版本比较。也可以使用一个多键来允许通过短或长名字进行检索。
@@ -179,7 +179,7 @@
 >        u'http://wiki.jenkins-ci.org/display/JENKINS/Gearman+Plugin',
 >        u'longName': u'Gearman Plugin', u'active': True, u'shortName':
 >        u'gearman-plugin', u'bundled': False}, ...}
->        ```
+>  ```
 15. **get_jobs**(folder_depth=0, view_name=None)
 >  - 描述：获取工程列表。
 >    每个工程都是一个带有名称、url、颜色和全名的字典。
@@ -199,7 +199,7 @@
 >            u'color': u'blue',
 >            u'fullname': u'all_tests'
 >        }]
->        ```
+>  ```
 16. **get_all_jobs**(folder_depth=None)
 >  - 描述：通过目录级数获取所有的工程列表。
 >    每个工程都是一个带有名称、url、颜色和全名的字典。
@@ -237,7 +237,7 @@
 >                // use json.toPrettyString() if viewing
 >                println json.toString()
 >              """)
->              ```
+>     ```
 17. **copy_job**(from_name, to_name)
 >  - 描述：复制一个工程。
 >    当该作业的源和目标文件夹不相同时，将会抛出异常。
@@ -278,7 +278,7 @@
 >  ```
 >        >>> next_bn = server.get_job_info('job_name')['nextBuildNumber']
 >        >>> server.set_next_build_number('job_name', next_bn + 50)
->        ```
+>  ```
 23. **job_exists**(name)
 >  - 描述：检查工程是否存在
 >  - 参数：
@@ -299,7 +299,7 @@
 >                "    hudson.model.AbstractProject).count{"
 >                "        !(it instanceof hudson.matrix.MatrixConfiguration)"
 >                "    })")
->                ```
+>     ```
 25. **assert_job_exists**(name, exception_message='job[%s] does not exist')
 >  - 描述：若工程不存在，则抛出异常
 >  - 参数：
@@ -350,7 +350,7 @@
 >          Plugin:cvs, Plugin:nodelabelparameter, Plugin:external-monitor-job,
 >          Plugin:mailer, Plugin:jquery, Plugin:antisamy-markup-formatter,
 >          Plugin:maven-plugin, Plugin:pam-auth]'
->          ```
+>  ```
 32. **install_plugin**(name, include_dependencies=True)
 >  - 从[Jenkins公共存储库](http://repo.jenkins-ci.org/repo/org/jenkins-ci/plugins)中安装一个插件
 >  - 参数：
@@ -363,7 +363,7 @@
 >          >>> info = server.install_plugin("jabber")
 >          >>> print(info)
 >          True
->          ```
+>  ```
 33. **stop_build**(name, number)
 >  - 描述：停止一个正在执行的构建。
 >  - 参数：
@@ -379,7 +379,7 @@
 >          >>> print(builds)
 >          [{'node': 'foo-slave', 'url': 'https://localhost/job/test/15/',
 >            'executor': 0, 'name': 'test', 'number': 15}]
->            ```
+>  ```
 35. **get_nodes**()
 >  - 描述：获取构建节点列表
 >    每个节点都是一个包含‘name’和‘offline’键的字典。
