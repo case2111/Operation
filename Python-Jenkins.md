@@ -43,11 +43,11 @@
 1. **get_job_info**(name, depth=0, fetch_all_builds=False)
 >  - 描述：获取工程的信息字典.
 >  - 参数：	
->   - name：工程名, `str`
->   - depth：JSON 深度, `int`
->   - fetch_all_builds：值为true会返回所有的构建，否则只会返回最近100个构建。这是以牺牲额外的API调用为代价的，该调用可能会返回大量的数据。 `bool`
+>    - name：工程名, `str`
+>    - depth：JSON 深度, `int`
+>    - fetch_all_builds：值为true会返回所有的构建，否则只会返回最近100个构建。这是以牺牲额外的API调用为代价的，该调用可能会返回大量的数据。 `bool`
 >  - 返回：	
->   - 工程信息的字典
+>    - 工程信息的字典
 2. **get_job_info_regex**(pattern, depth=0, folder_depth=0)
 >  - 描述：获得工程名字与正则表达式匹配的工程信息列表。
 >  - 参数:
@@ -77,18 +77,22 @@
 >  - 返回:	
 >    - 构建信息的字典，`dict`
 >  - 举例:
+>  ```
 >        >>> next_build_number = server.get_job_info('build_name')['nextBuildNumber']
 >        >>> output = server.build_job('build_name')
 >        >>> from time import sleep; sleep(10)
 >        >>> build_info = server.get_build_info('build_name', next_build_number)
 >        >>> print(build_info)
 >        {u'building': False, u'changeSet': {u'items': [{u'date': u'2011-12-19T18:01:52.540557Z', u'msg': u'test', u'revision': 66, u'user': u'unknown', u'paths': [{u'editType': u'edit', u'file': u'/branches/demo/index.html'}]}], u'kind': u'svn', u'revisions': [{u'module': u'http://eaas-svn01.i3.level3.com/eaas', u'revision': 66}]}, u'builtOn': u'', u'description': None, u'artifacts': [{u'relativePath': u'dist/eaas-87-2011-12-19_18-01-57.war', u'displayPath': u'eaas-87-2011-12-19_18-01-57.war', u'fileName': u'eaas-87-2011-12-19_18-01-57.war'}, {u'relativePath': u'dist/eaas-87-2011-12-19_18-01-57.war.zip', u'displayPath': u'eaas-87-2011-12-19_18-01-57.war.zip', u'fileName': u'eaas-87-2011-12-19_18-01-57.war.zip'}], u'timestamp': 1324317717000, u'number': 87, u'actions': [{u'parameters': [{u'name': u'SERVICE_NAME', u'value': u'eaas'}, {u'name': u'PROJECT_NAME', u'value': u'demo'}]}, {u'causes': [{u'userName': u'anonymous', u'shortDescription': u'Started by user anonymous'}]}, {}, {}, {}], u'id': u'2011-12-19_18-01-57', u'keepLog': False, u'url': u'http://eaas-jenkins01.i3.level3.com:9080/job/build_war/87/', u'culprits': [{u'absoluteUrl': u'http://eaas-jenkins01.i3.level3.com:9080/user/unknown', u'fullName': u'unknown'}], u'result': u'SUCCESS', u'duration': 8826, u'fullDisplayName': u'build_war #87'}
+>        ```
 7. **get_queue_info**()
 >  - 返回：工程字典列表，`[dict]`
 >  - 举例：
+>  ```
 >        >>> queue_info = server.get_queue_info()
 >        >>> print(queue_info[0])
 >        {u'task': {u'url': u'http://your_url/job/my_job/', u'color': u'aborted_anime', u'name': u'my_job'}, u'stuck': False, u'actions': [{u'causes': [{u'shortDescription': u'Started by timer'}]}], u'buildable': False, u'params': u'', u'buildableStartMilliseconds': 1315087293316, u'why': u'Build #2,532 is already in progress (ETA:10 min)', u'blocked': True}
+>        ```
 8. **cancel_queue**(id)
 >  - 描述：取消一个排队的构建。
 >  - 参数：	
@@ -102,24 +106,30 @@
 >  - 返回：	
 >    - 关于Jenkins或工程的信息字典， `dict`
 >  - 举例：
+>  ```
 >        >>> info = server.get_info()
 >        >>> jobs = info['jobs']
 >        >>> print(jobs[0])
 >        {u'url': u'http://your_url_here/job/my_job/', u'color': u'blue',u'name': u'my_job'}
+>        ```
 10. **get_whoami**()
 >  - 描述：获取Jenkins中账户的信息，这是验证用户的一种简单方法。
 >  - 返回：当前用户的信息，`dict`
 >  - 举例：
+>  ```
 >        >>> me = server.get_whoami()
 >        >>> print me['fullName']
 >        'John'
+>        ```
 11. **get_version**()
 >  - 描述：获取Jenkins的版本号。
 >  - 返回：Jenkins版本号编码，`str`
 >  - 举例：
+>  ```
 >        >>> info = server.get_version()
 >        >>> print info
->        1.541
+>        1.541'
+>        ```
 12. **get_plugins_info**(depth=2)
 >  - 描述：获取Jenkins所有已安装的插件信息。
 >    以JSON格式返回每个已安装的插件数据。
@@ -128,9 +138,11 @@
 >     - depth：JSON深度，`int`
 >  - 返回：所有已安装插件信息，`[dict]`
 >  - 举例：
+>  ```
 >        >>> info = server.get_plugins_info()
 >        >>> print(info)
 >        [{u'backupVersion': None, u'version': u'0.0.4', u'deleted': False,u'supportsDynamicLoad': u'MAYBE', u'hasUpdate': True,u'enabled': True, u'pinned': False, u'downgradable': False,u'dependencies': [], u'url':u'http://wiki.jenkins-ci.org/display/JENKINS/Gearman+Plugin',u'longName': u'Gearman Plugin', u'active': True, u'shortName':u'gearman-plugin', u'bundled': False}, ..]
+>        ```
 13. **get_plugin_info**(name, depth=2)
 >  - 描述：获取某个已安装的插件信息。
 >    以JSON格式返回某个插件的信息，插件名称必须严格匹配。
@@ -142,9 +154,11 @@
 >  - 返回：
 >     - 指定插件，`dict`
 >  - 举例：
+>  ```
 >        >>> info = server.get_plugin_info("Gearman Plugin")
 >        >>> print(info)
 >         {u'backupVersion': None, u'version': u'0.0.4', u'deleted': False,u'supportsDynamicLoad': u'MAYBE', u'hasUpdate': True,u'enabled': True, u'pinned': False, u'downgradable': False,u'dependencies': [], u'url':u'http://wiki.jenkins-ci.org/display/JENKINS/Gearman+Plugin',u'longName': u'Gearman Plugin', u'active': True, u'shortName':u'gearman-plugin', u'bundled': False}
+>         ```
 14. **get_plugins**(depth=2)
 >  - 描述：返回插件信息，使用帮助类进行版本比较。
 >    该方法检索所有已安装的插件的信息，并使用一个插件助手类来简化版本比较。也可以使用一个多键来允许通过短或长名字进行检索。
@@ -153,6 +167,7 @@
 >     - 	depth：JSON深度，`int`
 >  - 返回：所有插件的信息，`[dict]`
 >  - 举例：
+>  ```
 >        >>> j = Jenkins()
 >        >>> info = j.get_plugins()
 >        >>> print(info)
@@ -164,6 +179,7 @@
 >        u'http://wiki.jenkins-ci.org/display/JENKINS/Gearman+Plugin',
 >        u'longName': u'Gearman Plugin', u'active': True, u'shortName':
 >        u'gearman-plugin', u'bundled': False}, ...}
+>        ```
 15. **get_jobs**(folder_depth=0, view_name=None)
 >  - 描述：获取工程列表。
 >    每个工程都是一个带有名称、url、颜色和全名的字典。
@@ -174,6 +190,7 @@
 >  - 返回：
 >      - 工程列表：，`[{str: str, str: str, str: str, str: str}]`
 >  - 举例：
+>  ```
 >        >>> jobs = server.get_jobs()
 >        >>> print(jobs)
 >        [{
@@ -182,6 +199,7 @@
 >            u'color': u'blue',
 >            u'fullname': u'all_tests'
 >        }]
+>        ```
 16. **get_all_jobs**(folder_depth=None)
 >  - 描述：通过目录级数获取所有的工程列表。
 >    每个工程都是一个带有名称、url、颜色和全名的字典。
@@ -192,6 +210,7 @@
 >  - 注意：
 >    在多个文件夹的实例中，使用run脚本方法来检索所有作业可能更有效。
 >     - 举例：
+>     ```
 >            server.run_script("""
 >                import groovy.json.JsonBuilder;
 >                
@@ -218,6 +237,7 @@
 >                // use json.toPrettyString() if viewing
 >                println json.toString()
 >              """)
+>              ```
 17. **copy_job**(from_name, to_name)
 >  - 描述：复制一个工程。
 >    当该作业的源和目标文件夹不相同时，将会抛出异常。
@@ -255,8 +275,10 @@
 >     - name：工程名，`str`
 >     - number：下一个构件号，`int`
 >  - 举例：
+>  ```
 >        >>> next_bn = server.get_job_info('job_name')['nextBuildNumber']
 >        >>> server.set_next_build_number('job_name', next_bn + 50)
+>        ```
 23. **job_exists**(name)
 >  - 描述：检查工程是否存在
 >  - 参数：
@@ -269,6 +291,7 @@
 >  - 注意：
 >    在使用多个文件夹的实例中，使用run脚本方法来检索工作的总数量可能更有效。
 >     - 举例：
+>     ```
 >            # get all projects excluding matrix configuration
 >            # as they are simply part of a matrix project.
 >            server.run_script(
@@ -276,6 +299,7 @@
 >                "    hudson.model.AbstractProject).count{"
 >                "        !(it instanceof hudson.matrix.MatrixConfiguration)"
 >                "    })")
+>                ```
 25. **assert_job_exists**(name, exception_message='job[%s] does not exist')
 >  - 描述：若工程不存在，则抛出异常
 >  - 参数：
@@ -318,13 +342,15 @@
 >  - 参数：
 >     - script：groovy脚本，`string`
 >  - 返回：脚本的执行结果
->  - Example::
+>  - 举例：
+>  ```
 >          >>> info = server.run_script("println(Jenkins.instance.pluginManager.plugins)")
 >          >>> print(info)
 >          u'[Plugin:windows-slaves, Plugin:ssh-slaves, Plugin:translation,
 >          Plugin:cvs, Plugin:nodelabelparameter, Plugin:external-monitor-job,
 >          Plugin:mailer, Plugin:jquery, Plugin:antisamy-markup-formatter,
 >          Plugin:maven-plugin, Plugin:pam-auth]'
+>          ```
 32. **install_plugin**(name, include_dependencies=True)
 >  - 从[Jenkins公共存储库](http://repo.jenkins-ci.org/repo/org/jenkins-ci/plugins)中安装一个插件
 >  - 参数：
@@ -333,9 +359,11 @@
 >  - 返回：
 >     - Jenkins是否需要被重启，`bool`
 >  - 举例：
+>  ```
 >          >>> info = server.install_plugin("jabber")
 >          >>> print(info)
 >          True
+>          ```
 33. **stop_build**(name, number)
 >  - 描述：停止一个正在执行的构建。
 >  - 参数：
@@ -346,10 +374,12 @@
 >    每个构建都是一个包含‘name’、‘number’、‘url’、‘node’和‘executor’的字典。
 >  - 返回：构建列表，`[ { str: str, str: int, str:str, str: str, str: int} ]`
 >  - 举例：
+>  ```
 >          >>> builds = server.get_running_builds()
 >          >>> print(builds)
 >          [{'node': 'foo-slave', 'url': 'https://localhost/job/test/15/',
 >            'executor': 0, 'name': 'test', 'number': 15}]
+>            ```
 35. **get_nodes**()
 >  - 描述：获取构建节点列表
 >    每个节点都是一个包含‘name’和‘offline’键的字典。
