@@ -1,0 +1,1010 @@
+/* @external gwt-Button; */
+/* @external gwt-DialogBox dialogMiddleCenter; */
+/* @external gwt-TabBar; */
+/* @external gwt-TabBarFirst; */
+/* @external gwt-TabBarItem; */
+/* @external gwt-TabBarItem-selected; */
+/* @external gwt-TabBarRest; */
+/* @external gwt-TabPanel; */
+/* @external gwt-TabPanelBottom; */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+body, .gwt-DialogBox .dialogMiddleCenter {
+  background : #FCFEEF;
+  color : #000000;
+}
+.gwt-Button {
+  white-space : nowrap;
+}
+.gwt-TabBar .gwt-TabBarItem, .gwt-TabBar .gwt-TabBarRest, .gwt-TabPanelBottom {
+  background : transparent;
+}
+.gwt-TabBar {
+  border-bottom : 1px solid black;
+}
+.gwt-TabBar .gwt-TabBarFirst {
+  display : none;
+}
+.gwt-TabBar .gwt-TabBarItem {
+  color : #353535;
+  margin : 0;
+  background : #D4E9A9;
+  padding-top : 0.5em;
+  padding-bottom : 1px;
+  padding-left : 1em;
+  padding-right : 1em;
+  border-bottom : 3px solid transparent;
+  border-right : 0;
+}
+.gwt-TabBar .gwt-TabBarItem-selected {
+  color : #900;
+  background : #FFFFCC;
+  border-bottom-color : #900;
+}
+.gwt-TabBar .gwt-TabBarRest {
+  background : #D4E9A9;
+  padding-top : 0.5em;
+  padding-bottom : 1px;
+}
+.gwt-TabBar .gwt-TabPanelBottom {
+  background : #D4E9A9;
+  border-top : 1px solid black;
+  border-left : none;
+  border-right : none;
+  border-bottom : none;
+  padding : 1px;
+}
+.gwt-TabPanel .gwt-TabPanelBottom {
+  border : none;
+}
+/* @external *; */
+/* CssDef */
+/* CssDef */
+/* CssDef */
+/* CssDef */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+.greenCheckClass {
+  height : 16px;
+  width : 16px;
+  overflow : hidden;
+  background : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABh0lEQVR42tXS2y+CYRwH8O7QX+Gif4DQgSyzMU2sdJCORBLvzGbppLeDV4uF95LJIWQzpyEXzOaydBp/g/knxNebrTbMlu58r5/P9/d79jws1r+LKial5VEJWTUmLs2YODNCQnc4/4QVO7301MUIVh8DoJIumOJqtFN8d2V4q5e2nZsQyfuxnCcxfDgIMSWAmBTXlg9N3hg7rdfase94gMHFlZdyJMI57+dkUYBX+IJtt/o2y7XuxXlPwHCsnC7jqIS2nhoQzs4jlPXAeKBCm7/lG74xdlkS2ufFlBORnA9DcVlBuds3LdvsWR4/0WEx4wGVdkK/r0Ar2fwVFzNzpKwzn2tgv5vE2tMCqJQLtgsTiCszgikHAmkHdHsDEJJNbz9wKZZLKZuZDCJh/rxnKOOG/8EOf8qOoZgcQm/T+6+4FOm6lC3b6MHosRaBhzl4k7PQ7MggmOcyuL62oucqlnSviJmVFVBv94Pvaawcl0t8XLYoyAPP3fDKITg1VX1ZLlNSNf5rPgAuk8WI5dcaoQAAAABJRU5ErkJggg==") -0px -0px  no-repeat;
+}
+.gerritTopMenu {
+  font-size : 9pt;
+  padding-left : 5px;
+  padding-right : 5px;
+  background : transparent;
+}
+body, table td, select {
+  font-family : sans-serif;
+}
+button {
+  padding : 1px 6px;
+}
+.gerritBody {
+  font-size : small;
+  padding-left : 5px;
+  padding-right : 5px;
+}
+a, a:visited {
+  color : #0654ac;
+  text-decoration : none;
+}
+a:hover {
+  color : #0654ac;
+  text-decoration : underline;
+}
+#gerrit_btmmenu {
+  clear : both;
+  color : #a0adcc;
+  text-align : right;
+  padding-right : 10px;
+}
+.version a, .version a:visited, .version a:hover {
+  color : #2a5db0;
+}
+.gwt-Button {
+  color : #000;
+}
+.accountLinkPanel {
+  display : inline;
+}
+.accountLinkPanel img {
+  margin-right : 0.2em;
+  position : relative;
+  top : 2px;
+  height : 16px !important;
+  width : 16px;
+}
+.accountLinkPanel a {
+  position : relative;
+  top : -1px;
+}
+.inputFieldTypeHint {
+  color : grey;
+}
+.smallHeading {
+  margin-top : 5px;
+  font-weight : bold;
+}
+.link {
+  cursor : pointer;
+}
+.extensionPanel {
+  padding-top : 10px;
+}
+.menuScreenMenuBar {
+  background : #D4E9A9;
+  padding-top : 0.5em;
+  padding-bottom : 10em;
+  padding-left : 0.5em;
+  padding-right : 0.5em;
+  border-right : 1px solid #000;
+  margin-right : 0.5em;
+}
+.menuScreenMenuBar .menuItem {
+  white-space : nowrap;
+  display : block;
+  border-right : none;
+  padding : 0.2em;
+}
+.menuScreenMenuBar .menuItem.activeRow, .menuItem.activeRow {
+  background : #FFFFCC;
+}
+.linkMenuBar {
+  font-size : 9pt;
+  display : inline;
+  white-space : nowrap;
+  padding-left : 6px;
+}
+.menuItem {
+  padding-left : 5px;
+  padding-right : 5px;
+}
+.linkMenuItemNotLast {
+  border-right : 1px solid #000;
+}
+.topmenu, .topmenuTDglue {
+  width : 100%;
+}
+.topmenuTDmenu {
+  vertical-align : top;
+}
+.topmenuMenuLeft {
+  width : 300px;
+  font-size : 9pt;
+  padding-top : 5px;
+  padding-left : 5px;
+  padding-right : 5px;
+  background : none;
+  position : relative;
+  top : 0;
+}
+.topmenuMenuLeft tbody tr td table {
+  border : 0;
+}
+.topmenuMenuLeft tbody tr td table.gwt-TabBar {
+  border-bottom : 1px solid #ddd;
+}
+.topmenuMenuLeft .gwt-TextBox {
+  width : 250px;
+}
+.topmenuMenuLeft .gwt-Button {
+  padding : 3px 6px;
+}
+.topmenuMenuLeft .gwt-TabBarFirst {
+  display : none;
+}
+.topmenuMenuLeft .gwt-TabBarItem {
+  margin : 0;
+  background : transparent;
+  padding-top : 0;
+  padding-bottom : 1px;
+  padding-left : 1em;
+  padding-right : 1em;
+}
+.topmenuMenuLeft .gwt-TabBarRest {
+  background : transparent;
+  padding-top : 0;
+}
+.topmenuMenuLeft .gwt-TabPanelBottom {
+  background : transparent;
+  border-top : none;
+  border-left : none;
+  border-right : none;
+  border-bottom : none;
+  padding : 1px;
+}
+.topmenuMenuLeft .menuItem {
+  padding-left : 1em;
+  padding-right : 1em;
+  border-right : none;
+}
+.topmenuMenuRight {
+  float : right;
+  text-align : right;
+}
+.menuBarUserName {
+  padding-left : 5px;
+  padding-right : 5px;
+  white-space : nowrap;
+}
+.menuBarUserNameAvatar {
+  vertical-align : middle;
+}
+.menuBarUserNameFocusPanel {
+  display : inline;
+}
+.menuBarUserNamePanel {
+  display : inline;
+  cursor : pointer;
+  font-weight : bold;
+}
+.userInfoPopup {
+  border : 1px solid #000;
+  background : #fff;
+  box-shadow : 3px 3px 5px #888;
+  z-index : 200;
+}
+.searchPanel {
+  white-space : nowrap;
+  display : inline;
+}
+.searchPanel .searchTextBox {
+  font-size : 9pt;
+  margin : 8.286px 3px 0 0;
+}
+.searchPanel .searchDropdown {
+  font-size : 8pt;
+  border : 2px solid;
+  border-color : rgba(0, 0, 0, 0.15);
+  height : 16px;
+  border-radius : 2px;
+  box-sizing : content-box;
+}
+.searchPanel .searchButton {
+  text-align : center;
+  font-size : 8pt;
+  font-weight : bold;
+  cursor : pointer;
+  border : 2px solid;
+  color : #fff;
+  border-color : rgba(0, 0, 0, 0.15);
+  height : 14px;
+  background-color : #53a93f;
+  border-radius : 2px;
+  box-sizing : content-box;
+}
+.suggestBoxPopup {
+  z-index : 200;
+}
+.rpcStatus {
+  position : fixed;
+  top : 6px;
+  left : 50%;
+  padding-top : 4px;
+  padding-bottom : 4px;
+  padding-left : 10px;
+  padding-right : 10px;
+  text-align : center;
+  font-weight : bold;
+  background : #fff1a8;
+  z-index : 200;
+}
+.errorDialog {
+  background : none;
+  border : none;
+  padding : 10px;
+  width : 600px;
+  color : #FCFEEF;
+  font-size : 15px;
+  font-family : verdana;
+  z-index : 200;
+}
+.errorDialogGlass {
+  opacity : 0.75;
+  z-index : 200;
+  opacity : 0.8;
+}
+.errorDialogTitle {
+  font-size : 30px;
+  font-weight : bold;
+  margin-bottom : 15px;
+}
+.errorDialogErrorType {
+  font-weight : bold;
+  white-space : nowrap;
+  margin-bottom : 15px;
+}
+.errorDialogButtons {
+  width : 100%;
+  margin-top : 15px;
+}
+.errorDialog a, .errorDialog a:visited, .errorDialog a:hover {
+  color : #fff;
+  font-weight : bold;
+  font-size : 15px;
+  font-family : verdana;
+}
+.loadingPluginsDialog {
+  background : #fff;
+  color : #000;
+  width : auto;
+}
+.screenHeader {
+  white-space : nowrap;
+  font-size : 16pt;
+  margin : 3px 0 8px;
+  text-overflow : ellipsis;
+  overflow : hidden;
+}
+.changeTable {
+  border-collapse : separate;
+  border-spacing : 0;
+}
+.changeTable tr:nth-child(even) {
+  background : transparent;
+}
+.changeTable tr:nth-child(odd) {
+  background : transparent;
+}
+.changeTable .iconCell {
+  width : 1px;
+  padding : 0;
+  vertical-align : middle;
+  border-bottom : 1px solid #D4E9A9;
+}
+.changeTable .leftMostCell {
+  border-left : 1px solid #D4E9A9;
+}
+.changeTable .dataCell {
+  padding-left : 5px;
+  padding-right : 5px;
+  border-right : 1px solid #D4E9A9;
+  border-bottom : 1px solid #D4E9A9;
+  vertical-align : middle;
+  height : 20px;
+}
+.changeTable .dataCellHidden {
+  display : none;
+}
+.changeTable a.gwt-InlineHyperlink, .changeTable a.gwt-Anchor {
+  color : #222 !important;
+}
+.changeTable .changeSize {
+  height : 10px;
+  display : inline-block;
+  opacity : 0.6;
+}
+.accountDashboard.changeTable tr {
+  color : #444;
+}
+.accountDashboard.changeTable tr a {
+  color : #444;
+  text-decoration : none;
+}
+.accountDashboard.changeTable .needsReview, .accountDashboard.changeTable .needsReview a {
+  font-weight : bold;
+  color : #000000;
+}
+.changeTable .activeRow, .accountDashboard.changeTable .activeRow, .accountDashboard.changeTable .activeRow a {
+  background : #FFFFCC !important;
+}
+.changeTable .cSIZE {
+  width : 70px;
+  text-align : right;
+}
+.changeTable .cSUBJECT div {
+  text-overflow : ellipsis;
+  overflow : hidden;
+  white-space : nowrap;
+}
+.changeTable .cASSIGNEDTOME {
+  background : #ffe9d6 !important;
+}
+.changeTable .cASSIGNEE, .changeTable .cOWNER, .changeTable .cSTATUS {
+  white-space : nowrap;
+}
+.changeTable .cLastUpdate {
+  white-space : nowrap;
+  text-align : right;
+  width : 1em;
+}
+.changeTable .groupName, .changeTable .dataCell.singleLine {
+  white-space : nowrap;
+}
+.changeTable .cAPPROVAL {
+  width : 0.5em;
+  text-align : center;
+}
+.changeTable .dataCell.negscore {
+  color : red;
+}
+.changeTable .dataCell.posscore {
+  color : #08a400;
+}
+.changeTable .dataCell.labelNotApplicable {
+  background : #f5f5f5;
+}
+.changeTable .iconHeader {
+  border-top : 1px solid #FCFEEF;
+  border-bottom : 1px solid #FCFEEF;
+  background-color : #D4E9A9;
+}
+.changeTable .dataHeader {
+  border : 1px solid #FCFEEF;
+  padding : 2px 6px 1px;
+  background-color : #D4E9A9;
+  font-style : italic;
+  white-space : nowrap;
+  color : #000000;
+}
+.changeTable .dataHeaderHidden {
+  display : none;
+}
+.changeTable .sectionHeader {
+  border-top : 8px solid #FCFEEF;
+  padding : 2px 6px 1px;
+  background-color : #D4E9A9;
+  white-space : nowrap;
+  font-weight : bold;
+  color : #000000;
+}
+.changeTable .emptySection {
+  border-left : 1px solid #D4E9A9;
+  border-right : 1px solid #D4E9A9;
+  border-bottom : 1px solid #D4E9A9;
+  font-style : italic;
+  padding-left : 25px;
+}
+.changeTablePrevNextLinks {
+  float : right;
+  padding-right : 5px;
+}
+.changeTablePrevNextLinks td {
+  width : 5em;
+  text-align : right;
+}
+.changeTablePrevNextLinks .gwt-Hyperlink {
+  font-size : 9pt;
+  color : #2a5db0;
+}
+.avatarInfoPanel {
+  margin-right : 10px;
+}
+.avatarInfoPanel td {
+  text-align : center;
+}
+.infoBlock {
+  border-collapse : collapse;
+  border-spacing : 0;
+}
+.infoBlock td {
+  padding : 2px 4px 2px 6px;
+  border-right : 1px solid #D4E9A9;
+  border-bottom : 1px solid #D4E9A9;
+  text-align : left;
+  white-space : nowrap;
+}
+.infoBlock td td {
+  padding-left : 0;
+  border-right : 0;
+}
+.infoBlock td.topmost {
+  border-top : 1px solid #D4E9A9;
+}
+.infoBlock td.header {
+  background-color : #D4E9A9;
+  font-style : italic;
+  text-align : right;
+}
+.infoBlock td.bottomheader {
+  border-bottom : 1px solid #D4E9A9;
+}
+.patchSetActions {
+  margin-bottom : 10px;
+}
+.patchSetActions .gwt-Button {
+  margin-right : 30px;
+  font-size : 8pt;
+}
+.downloadBox {
+  min-width : 580px;
+  margin : 5px;
+  margin-right : 15px;
+}
+.downloadBoxTable {
+  border-spacing : 0;
+  width : 100%;
+}
+.downloadBoxTableCommandColumn {
+  text-align : left;
+  font-weight : normal;
+  white-space : nowrap;
+  max-height : 18px;
+  width : 80px;
+  padding-right : 5px;
+}
+.downloadBoxSpacer {
+  margin-left : 5px;
+  margin-right : 5px;
+}
+.downloadBoxScheme, .downloadBoxCopyLabel div {
+  float : right;
+}
+.downloadBoxCopyLabel {
+  font-size : smaller;
+  font-family : monospace;
+}
+.downloadBoxCopyLabel span {
+  width : 500px;
+  white-space : nowrap;
+  display : inline-block;
+  overflow : hidden;
+  text-overflow : ellipsis;
+}
+.downloadBoxCopyLabel .gwt-TextBox {
+  padding : 0;
+  margin : 0;
+  border : 0;
+  max-height : 18px;
+  width : 500px;
+}
+.downloadLinkHeader {
+  background : #D4E9A9;
+  white-space : nowrap;
+  border-bottom : 1px solid #000;
+}
+.downloadLinkHeaderGap {
+  margin-left : 5em;
+}
+.downloadLinkList {
+  display : inline;
+  white-space : nowrap;
+}
+.downloadLink {
+  color : #000;
+  text-decoration : none;
+  white-space : nowrap;
+  background : #D4E9A9;
+  border-right : 1px solid #000;
+  padding-left : 0.5em;
+  padding-right : 0.5em;
+}
+a:hover.downloadLink {
+  color : #000;
+}
+.downloadLink_Active {
+  background : #FFFFCC;
+}
+.downloadLinkCopyLabel {
+  white-space : pre;
+  font-family : monospace;
+  font-size : 12px;
+  margin-left : 0.5em;
+  margin-right : 0.5em;
+}
+.downloadLinkCopyLabel .gwt-TextBox {
+  width : 40em;
+}
+.downloadLinkCopyLabel span {
+  width : 40em;
+  white-space : nowrap;
+  display : inline-block;
+  overflow : hidden;
+  text-overflow : ellipsis;
+}
+.usernameField {
+  white-space : nowrap;
+}
+.accountUsername, .accountPassword {
+  font-family : monospace;
+  font-size : small;
+}
+.sshKeyPanelEncodedKey {
+  white-space : nowrap;
+  text-overflow : ellipsis;
+  overflow : hidden;
+  font-family : monospace;
+  font-size : small;
+}
+.sshKeyPanelInvalid, .identityUntrustedExternalId {
+  white-space : nowrap;
+  color : red;
+  font-weight : bold;
+}
+.accountInfoBlock {
+  margin-bottom : 10px;
+}
+.accountInfoBlock .gwt-Button {
+  margin-left : 10px;
+}
+.addWatchPanel {
+  margin-top : 10px;
+  padding : 5px 5px 5px 5px;
+}
+.watchedProjectFilter {
+  margin-left : 1em;
+  color : grey;
+}
+.addBranch, .addSshKeyPanel {
+  margin-top : 10px;
+  background-color : #D4E9A9;
+  padding : 5px 5px 5px 5px;
+}
+.addSshKeyPanel ol {
+  margin-top : 0;
+  margin-bottom : 5px;
+}
+.addSshKeyPanel td {
+  width : 100%;
+}
+.sshKeyTable td.dataCell, .sshKeyTable td.iconCell {
+  vertical-align : top;
+}
+.createProjectPanel {
+  margin-bottom : 10px;
+  background-color : #D4E9A9;
+  padding : 5px 5px 5px 5px;
+}
+.sshHostKeyPanel {
+  margin-top : 10px;
+  border : 1px solid #D4E9A9;
+  padding : 5px 5px 5px 5px;
+}
+.sshHostKeyPanelHeading {
+  white-space : nowrap;
+  margin-top : 5px;
+  margin-left : 1em;
+}
+.sshHostKeyPanelFingerprintData {
+  margin-left : 2em;
+  white-space : nowrap;
+  font-family : monospace;
+  font-size : small;
+}
+.sshHostKeyPanelKnownHostEntry {
+  margin-left : 2em;
+  white-space : nowrap;
+  font-family : monospace;
+  font-size : small;
+  width : 80em;
+}
+.contributorAgreementButton {
+  font-weight : bold;
+}
+.contributorAgreementShortDescription {
+  margin-left : 20px;
+  margin-right : 20px;
+  margin-bottom : 10px;
+  padding : 5px 5px 5px 5px;
+  border : 1px solid #b0bdcc;
+}
+.contributorAgreementAlreadySubmitted {
+  margin-left : 20px;
+  margin-right : 20px;
+  padding : 5px 5px 5px 5px;
+  color : red;
+}
+.contributorAgreementLegal {
+  margin-left : 20px;
+  margin-right : 20px;
+  padding : 5px 5px 5px 5px;
+  border : 1px solid #b0bdcc;
+}
+.registerScreenSection {
+  margin-top : 2em;
+}
+.registerScreenExplain {
+  margin-left : 10px;
+  margin-top : 5px;
+  margin-bottom : 5px;
+  width : 45em;
+}
+.registerScreenNextLinks {
+  margin-top : 2em;
+}
+.registerScreenNextLinks .gwt-InlineHyperlink {
+  margin-left : 2em;
+  white-space : nowrap;
+}
+.registerScreenSection .changeTable, .registerScreenSection .sshHostKeyPanel .sshHostKeyPanelKnownHostEntry {
+  width : 45em;
+}
+.registerScreenSection .addSshKeyPanel {
+  background : none;
+}
+.registerScreenSection .sshHostKeyPanel {
+  border : none;
+}
+.projectActions, .oauthInfoBlock, .groupUUIDPanel {
+  margin-bottom : 10px;
+}
+.oauthToken {
+  font-family : monospace;
+  font-size : small;
+  width : 40em;
+}
+.oauthToken span {
+  white-space : nowrap;
+  display : inline-block;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  width : 38em;
+}
+.oauthExpires {
+  font-family : monospace;
+  font-size : small;
+  width : 40em;
+}
+.oauthPanel {
+  margin-top : 10px;
+  border : 1px solid #D4E9A9;
+  padding : 5px 5px 5px 5px;
+}
+.oauthPanelNetRCHeading {
+  margin-top : 5px;
+  margin-left : 1em;
+  white-space : nowrap;
+}
+.oauthPanelNetRCEntry {
+  margin-top : 5px;
+  margin-left : 2em;
+  font-family : monospace;
+  font-size : small;
+  width : 80em;
+}
+.oauthPanelNetRCEntry span {
+  white-space : nowrap;
+  display : inline-block;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  width : 78em;
+}
+.oauthPanelCookieHeading {
+  margin-top : 15px;
+  margin-left : 1em;
+  white-space : nowrap;
+}
+.oauthPanelCookieEntry {
+  margin-top : 5px;
+  margin-left : 2em;
+  font-family : monospace;
+  font-size : small;
+  width : 80em;
+}
+.oauthPanelCookieEntry span {
+  white-space : nowrap;
+  display : inline-block;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  width : 78em;
+}
+.commentedActionDialog .gwt-DisclosurePanel .header td {
+  font-weight : bold;
+  white-space : nowrap;
+}
+.commentedActionDialog .smallHeading {
+  font-size : small;
+  font-weight : bold;
+  white-space : nowrap;
+}
+.commentedActionDialog .commentedActionMessage {
+  margin-left : 10px;
+  background : #D4E9A9;
+  padding : 5px 5px 5px 5px;
+}
+.commentedActionDialog .commentedActionMessage textarea {
+  font-size : small;
+}
+.commentedActionDialog .gwt-Hyperlink {
+  white-space : nowrap;
+  font-size : small;
+}
+.commentedActionDialog .rebaseContentPanel {
+  margin-left : 10px;
+  background : #D4E9A9;
+  padding : 5px 5px 5px 5px;
+  width : 300px;
+}
+.commentedActionDialog .rebaseContentPanel .rebaseSuggestBox {
+  font-size : small;
+  width : 100%;
+}
+.groupDescriptionPanel, .groupNamePanel {
+  margin-bottom : 3px;
+}
+.groupNameTextBox {
+  margin-bottom : 2px;
+}
+.groupOptionsPanel {
+  margin-bottom : 5px;
+}
+.groupOwnerPanel {
+  margin-bottom : 3px;
+}
+.groupOwnerTextBox, .groupMembersTable, .groupIncludesTable {
+  margin-bottom : 2px;
+}
+.addMemberTextBox {
+  margin-right : 2px;
+  margin-bottom : 2px;
+}
+.specialBranchIconCell {
+  background : #ececec;
+  border-bottom : 1px solid #fff;
+  border-top : 1px solid #fff;
+}
+.specialBranchDataCell {
+  background : #ececec;
+  border : 1px solid #fff;
+  font-style : italic;
+  padding : 2px 6px 1px;
+}
+.editHeadButton {
+  float : right;
+  cursor : pointer;
+}
+.branchTableDeleteButton {
+  margin-top : 5px;
+}
+.branchTablePrevNextLinks {
+  position : relative;
+}
+.branchTablePrevNextLinks td {
+  float : left;
+  width : 5em;
+  text-align : left;
+  padding-right : 10px;
+}
+.branchTablePrevNextLinks .gwt-Hyperlink {
+  font-size : 9pt;
+  color : #2a5db0;
+}
+.projectFilterPanel {
+  margin-bottom : 10px;
+}
+.projectFilterPanel input {
+  width : 200px;
+}
+.projectFilterLabel {
+  margin-right : 5px;
+}
+.projectNameColumn {
+  min-width : 300px;
+}
+.queryIcon {
+  position : relative;
+  top : 2px;
+  margin-right : 3px;
+}
+.maxObjectSizeLimitEffectiveLabel, .pluginProjectConfigInheritedValue {
+  padding-top : 5px;
+  padding-left : 5px;
+}
+.stringListPanelButtons {
+  margin-left : 0.5em;
+}
+.stringListPanelButtons .gwt-Button {
+  margin-right : 2em;
+  font-size : 7pt;
+  padding : 1px;
+}
+.pagingLink {
+  font-size : 18px;
+  margin-top : 5px;
+  margin-bottom : 15px;
+}
+/* @external popupContent; */
+.com-google-gwtexpui-globalkey-client-KeyCss-helpPopup {
+  background : #000 none repeat scroll 0 50%;
+  color : #fff;
+  font-family : arial, sans-serif;
+  font-weight : bold;
+  overflow : hidden;
+  text-align : left;
+  text-shadow : 1px 1px 7px #000;
+  width : 92%;
+  z-index : 1002;
+  opacity : 0.85;
+  border-radius : 10px;
+  -webkit-border-radius : 10px;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpPopup .popupContent {
+  margin : 10px;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpPopup hr, .com-google-gwtexpui-globalkey-client-KeyCss-helpHeader, .com-google-gwtexpui-globalkey-client-KeyCss-helpHeaderGlue {
+  width : 100%;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpHeader td {
+  white-space : nowrap;
+  color : #fff;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpHeader a, .com-google-gwtexpui-globalkey-client-KeyCss-helpHeader a:visited, .com-google-gwtexpui-globalkey-client-KeyCss-helpHeader a:hover {
+  color : #dd0;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpTable {
+  width : 90%;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpTable td {
+  vertical-align : top;
+  white-space : nowrap;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpTableGlue {
+  width : 25px;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpGroup {
+  color : #dd0;
+  text-align : left;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpKeyStroke {
+  text-align : right;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpSeparator {
+  width : 0.5em;
+  text-align : center;
+  font-weight : bold;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpKey {
+  color : #dd0;
+}
+.com-google-gwtexpui-clippy-client-ClippyCss-label {
+  vertical-align : top;
+}
+.com-google-gwtexpui-clippy-client-ClippyCss-swf {
+  margin-left : 5px;
+  height : 14px;
+  width : 14px;
+  display : inline-block !important;
+  overflow : hidden;
+}
+.com-google-gwtexpui-clippy-client-ClippyCss-copier {
+  margin-left : 5px;
+  height : 14px;
+  width : 14px;
+  display : inline-block;
+  font-size : 12px;
+  vertical-align : top;
+  padding : 0;
+  border : 0;
+  background-color : inherit;
+  cursor : pointer;
+}
+.com-google-gwtexpui-clippy-client-ClippyCss-copier:focus {
+  outline : none;
+}
+.com-google-gwtexpui-progress-client-ProgressCss-container {
+  position : relative;
+  border : 1px solid #6b90da;
+  height : 20px;
+  width : 200px;
+}
+.com-google-gwtexpui-progress-client-ProgressCss-text {
+  position : absolute;
+  bottom : 0;
+  left : 0;
+  z-index : 2;
+  width : 200px;
+  padding-bottom : 3px;
+  text-align : center;
+  font-weight : bold;
+  font-style : italic;
+  font-size : smaller;
+}
+.com-google-gwtexpui-progress-client-ProgressCss-bar {
+  background : #f0f7f9;
+  border-right : 1px solid #d0d7d9;
+  position : absolute;
+  top : 0;
+  left : 0;
+  height : 20px;
+}

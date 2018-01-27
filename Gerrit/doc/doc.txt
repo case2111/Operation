@@ -1,0 +1,2 @@
+插件下载地址：https://gerrit-ci.gerritforge.com/
+文档查询地址：https://www.gerritcodereview.com/
